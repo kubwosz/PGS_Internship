@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using PGS_Internship_Jakub_Woszczyna.Pages;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PGS_Internship_Jakub_Woszczyna
+namespace PGS_Internship_Jakub_Woszczyna.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PageFinish.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageFinish : Page
     {
-        public MainWindow()
+        public PageFinish()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            frameMainWindow.NavigationService.Navigate(new PageName());
         }
     }
 }

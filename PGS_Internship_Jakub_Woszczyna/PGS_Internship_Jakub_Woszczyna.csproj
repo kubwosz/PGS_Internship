@@ -66,6 +66,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PageFinish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageHomeAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\PersonalData.cs" />
+    <Compile Include="Pages\PageFinish.xaml.cs">
+      <DependentUpon>PageFinish.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageHomeAddress.xaml.cs">
       <DependentUpon>PageHomeAddress.xaml</DependentUpon>
     </Compile>

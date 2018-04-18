@@ -24,5 +24,15 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
         {
             InitializeComponent();
         }
+
+        private void buttonPrev_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageName());
+        }
+
+        private void buttonNext_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageHomeAddress());
+        }
     }
 }

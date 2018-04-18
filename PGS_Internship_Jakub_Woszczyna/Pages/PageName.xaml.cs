@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PGS_Internship_Jakub_Woszczyna.Pages;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,11 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
         public PageName()
         {
             InitializeComponent();
+        }
+
+        private void buttonNext_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageSurname());
         }
     }
 }
