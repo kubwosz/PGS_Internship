@@ -11,6 +11,8 @@
     <Grid>
         <Button x:Name="buttonNext" Content="Dalej" HorizontalAlignment="Left" Margin="603,381,0,0" VerticalAlignment="Top" Width="75" Click="buttonNext_Click"/>
         <Button x:Name="buttonPrev" Content="Powrót" HorizontalAlignment="Left" Margin="137,381,0,0" VerticalAlignment="Top" Width="75" Click="buttonPrev_Click"/>
+        <Label x:Name="labelHomeAddress" Content="Podaj swój adres zamieszkania:" HorizontalAlignment="Left" Margin="325,147,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxHomeAddress" HorizontalAlignment="Left" Height="23" Margin="325,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Page>

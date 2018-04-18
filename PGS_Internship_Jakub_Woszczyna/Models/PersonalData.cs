@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PGS_Internship_Jakub_Woszczyna.Models
 {
-    class PersonalData
+    public class PersonalData
     {
         public string Name { get; set; }
         public string Surname { get; set; }

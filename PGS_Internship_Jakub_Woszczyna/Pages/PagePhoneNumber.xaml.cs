@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PGS_Internship_Jakub_Woszczyna.Models;
 
 namespace PGS_Internship_Jakub_Woszczyna.Pages
 {
@@ -20,19 +21,22 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
     /// </summary>
     public partial class PagePhoneNumber : Page
     {
-        public PagePhoneNumber()
+        public PagePhoneNumber(PersonalData personalDataTmp)
         {
             InitializeComponent();
+            personalData = personalDataTmp;
         }
+        PersonalData personalData;
 
         private void buttonPrev_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageSurname());
+            this.NavigationService.Navigate(new PageSurname(personalData));
         }
 
         private void buttonFinish_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageFinish());
+            personalData.PhoneNumber = textBoxPhoneNumber.Text;
+            this.NavigationService.Navigate(new PageFinish(personalData));
         }
     }
 }

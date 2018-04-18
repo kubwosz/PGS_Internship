@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PGS_Internship_Jakub_Woszczyna.Models;
 
 namespace PGS_Internship_Jakub_Woszczyna.Pages
 {
@@ -20,9 +21,15 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
     /// </summary>
     public partial class PageFinish : Page
     {
-        public PageFinish()
+        public PageFinish(PersonalData personalData)
         {
             InitializeComponent();
+            labelFinish.Content = $@"
+{personalData.Name}
+{ personalData.Surname}
+{personalData.HomeAddress}
+{personalData.PhoneNumber}
+";
         }
     }
 }
