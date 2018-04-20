@@ -21,22 +21,37 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
     /// </summary>
     public partial class PageHomeAddress : Page
     {
+        PersonalData personalData;
         public PageHomeAddress(PersonalData personalDataTmp)
         {
             InitializeComponent();
             personalData = personalDataTmp;
+            textBoxHomeAddress.Text = personalData.HomeAddress;
         }
-        PersonalData personalData;
 
         private void buttonPrev_Click(object sender, RoutedEventArgs e)
         {
+            personalData.HomeAddress = textBoxHomeAddress.Text;
             this.NavigationService.Navigate(new PageSurname(personalData));
         }
 
         private void buttonNext_Click(object sender, RoutedEventArgs e)
         {
-            personalData.HomeAddress = textBoxHomeAddress.Text;
-            this.NavigationService.Navigate(new PagePhoneNumber(personalData));
+            if (textBoxHomeAddress.Text == "" || textBoxHomeAddress.Text == "Wpisz adres...")
+            {
+                MessageBox.Show("Proszę wpisać adres", "Brak adresu");
+            }
+            else
+            {
+                personalData.HomeAddress = textBoxHomeAddress.Text;
+                this.NavigationService.Navigate(new PagePhoneNumber(personalData));
+            }
+
+        }
+
+        private void textBoxHomeAddress_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxHomeAddress.Text = string.Empty;
         }
     }
 }

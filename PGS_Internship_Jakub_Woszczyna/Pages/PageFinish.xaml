@@ -9,7 +9,7 @@
       Title="PageFinish">
 
     <Grid>
-        <Label x:Name="labelFinish" Content="Label" HorizontalAlignment="Left" Margin="315,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelFinish" Content="Dane osobiste:" HorizontalAlignment="Left" Margin="315,173,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman"/>
 
     </Grid>
 </Page>

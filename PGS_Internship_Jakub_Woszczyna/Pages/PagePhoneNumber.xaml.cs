@@ -21,22 +21,36 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
     /// </summary>
     public partial class PagePhoneNumber : Page
     {
+        PersonalData personalData;
         public PagePhoneNumber(PersonalData personalDataTmp)
         {
             InitializeComponent();
             personalData = personalDataTmp;
+            textBoxPhoneNumber.Text = personalData.PhoneNumber;
         }
-        PersonalData personalData;
 
         private void buttonPrev_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageSurname(personalData));
+            personalData.PhoneNumber = textBoxPhoneNumber.Text;
+            this.NavigationService.Navigate(new PageHomeAddress(personalData));
         }
 
         private void buttonFinish_Click(object sender, RoutedEventArgs e)
         {
-            personalData.PhoneNumber = textBoxPhoneNumber.Text;
-            this.NavigationService.Navigate(new PageFinish(personalData));
+            if (textBoxPhoneNumber.Text == "" || textBoxPhoneNumber.Text == "Wpisz numer telefonu...")
+            {
+                MessageBox.Show("Proszę wpisać numer telefonu", "Brak numeru");
+            }
+            else
+            {
+                personalData.PhoneNumber = textBoxPhoneNumber.Text;
+                this.NavigationService.Navigate(new PageFinish(personalData));
+            }
+        }
+
+        private void textBoxPhoneNumber_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxPhoneNumber.Text = string.Empty;
         }
     }
 }

@@ -24,12 +24,7 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
         public PageFinish(PersonalData personalData)
         {
             InitializeComponent();
-            labelFinish.Content = $@"
-{personalData.Name}
-{ personalData.Surname}
-{personalData.HomeAddress}
-{personalData.PhoneNumber}
-";
+            labelFinish.Content = personalData.ToString();
         }
     }
 }

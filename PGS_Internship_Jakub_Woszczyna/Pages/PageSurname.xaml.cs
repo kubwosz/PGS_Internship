@@ -21,23 +21,39 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
     /// </summary>
     public partial class PageSurname : Page
     {
+        PersonalData personalData;
+
         public PageSurname(PersonalData personalDataTmp)
         {
             InitializeComponent();
             personalData = personalDataTmp;
+            textBoxSurname.Text = personalData.Surname;
         }
 
-        PersonalData personalData;
 
         private void buttonPrev_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageName());
+            personalData.Surname = textBoxSurname.Text;
+            this.NavigationService.Navigate(new PageName(personalData));
         }
 
         private void buttonNext_Click(object sender, RoutedEventArgs e)
         {
-            personalData.Surname = textBoxSurname.Text;
-            this.NavigationService.Navigate(new PageHomeAddress(personalData));
+            if (textBoxSurname.Text == "" || textBoxSurname.Text == "Wpisz nazwisko...")
+            {
+                MessageBox.Show("Proszę wpisać nazwisko", "Brak nazwiska");
+            }
+            else
+            {
+                personalData.Surname = textBoxSurname.Text;
+                this.NavigationService.Navigate(new PageHomeAddress(personalData));
+            }
+
+        }
+
+        private void textBoxSurname_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBoxSurname.Text = string.Empty;
         }
     }
 }
