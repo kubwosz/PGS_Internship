@@ -9,7 +9,8 @@
       Title="PageFinish">
 
     <Grid>
-        <Label x:Name="labelFinish" Content="Dane osobiste:" HorizontalAlignment="Left" Margin="315,173,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman"/>
+        <Label x:Name="labelFinish" Content="Dane osobiste:" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman"/>
+        <Button x:Name="buttonExit" Content="Zamknij aplikację" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Width="120" Click="buttonExit_Click"/>
 
     </Grid>
 </Page>

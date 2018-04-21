@@ -10,7 +10,7 @@
 
     <Grid>
         <Button x:Name="buttonNext" Content="Dalej" HorizontalAlignment="Left" Margin="589,378,0,0" VerticalAlignment="Top" Width="75" Click="buttonNext_Click"/>
-        <Label x:Name="lableName" Content="Podaj swoje imię:" HorizontalAlignment="Left" Margin="325,147,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="325,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" GotFocus="textBoxName_GotFocus"/>
+        <Label x:Name="lableName" Content="Podaj swoje imię:" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Center" Height="23" Margin="0,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" GotFocus="textBoxName_GotFocus"/>
     </Grid>
 </Page>

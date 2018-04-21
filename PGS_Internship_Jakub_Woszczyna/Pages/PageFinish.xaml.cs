@@ -26,5 +26,10 @@ namespace PGS_Internship_Jakub_Woszczyna.Pages
             InitializeComponent();
             labelFinish.Content = personalData.ToString();
         }
+
+        private void buttonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

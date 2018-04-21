@@ -1,0 +1,15 @@
+﻿<Window x:Class="PGS_Internship_Jakub_Woszczyna.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PGS_Internship_Jakub_Woszczyna"
+        mc:Ignorable="d"
+        Title="PGS Software Wizard" Height="450" Width="800" Loaded="Window_Loaded" Background="#FFE26C0A">
+    <Grid>
+        <Frame x:Name="frameMainWindow" Content="" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" NavigationUIVisibility="Hidden" OpacityMask="Black"/>
+        <Label x:Name="labelHeart" Content="♥" Margin="356,385,411,0" VerticalAlignment="Top" RenderTransformOrigin="-0.462,0.192" HorizontalAlignment="Center" FontSize="12" Width="28" FontFamily="Trebuchet MS" Foreground="#FFDE0A0A"/>
+        <Label x:Name="labelMadeWith" Content="Made with     by Jakub Woszczyna " HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top"  FontSize="12" FontFamily="Trebuchet MS"/>
+
+    </Grid>
+</Window>
